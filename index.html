@@ -1,79 +1,142 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/18482433" />
+    <link rel="stylesheet" href="main.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <title>Frederico Curti</title>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js" integrity="sha512-hzyXu3u+VDu/7vpPjRKFp9w33Idx7pWWNazPm+aCMRu26yZXFCby1gn1JxevVv3LDwnSbyKrvLo3JNdi4Qx1ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Frederico Curti | Portfolio</title>
+  </head>
 
-<body>
+  <body>
+    <div class="backdrop"></div>
     <div class="App">
-        <header>
-            <nav>
-                <span class="logo">fredericocurti</span>
-                <ul class="nav-links-container">
-                    <a href="https://github.com/fredericocurti"><img class="nav-link img-btn" src="assets/github.png"
-                            height="24"></a>
-                    <a href="https://www.linkedin.com/in/fredericocurti"><img class="nav-link img-btn"
-                            src="assets/linkedin.png" height="24"></a>
-                    <img id="dm-button" title="Dark Mode" class="nav-link img-btn" src="assets/darkmode.png"
-                        height="24" />
-                </ul>
-            </nav>
-            <div class="greetings-container">
-                <h1 style="margin-bottom: 0px"> Hi, I'm Frederico. </h1>
-                <h4 style="font-weight: normal; margin-top: 8px;"> I'm a Computer Engineer from São Paulo, Brazil. </h4>
-            </div>
-        </header>
-
-
-        <div id="p5_loading"></div>
-        <div id='canvas-container'>
-            <img id="trophy-button" title="Leaderboard" class="nav-link img-btn trophy" src="assets/trophy.png"
-                height="18" />
+      <header>
+        <nav>
+          <span class="logo">fredericocurti</span>
+          <ul class="nav-links-container">
+            <a href="https://github.com/fredericocurti"
+              ><img
+                class="nav-link img-btn"
+                src="assets/github.png"
+                height="24"
+            /></a>
+            <a href="https://www.linkedin.com/in/fredericocurti"
+              ><img
+                class="nav-link img-btn"
+                src="assets/linkedin.png"
+                height="24"
+            /></a>
+            <img
+              id="dm-button"
+              title="Dark Mode"
+              class="nav-link img-btn"
+              src="assets/darkmode.png"
+              height="24"
+            />
+          </ul>
+        </nav>
+        <div class="greetings-container">
+          <h1 style="margin-bottom: 0px">Hi, I'm Frederico.</h1>
+          <h4 style="font-weight: normal; margin-top: 8px">
+            I'm a Computer Engineer from São Paulo, Brazil.
+          </h4>
         </div>
-        <div id='leaderboard'></div>
+      </header>
 
+      <div id="p5_loading"></div>
+      <div id="canvas-container">
+        <img
+          id="trophy-button"
+          title="Leaderboard"
+          class="nav-link img-btn trophy"
+          src="assets/trophy.png"
+          height="18"
+        />
+      </div>
+      <div id="leaderboard"></div>
 
-        <section>
-            <h2> About me </h2>
-            <p> I'm a Computer Engineering student that's about to graduate at Insper. My most recent work
-                includes the development and design of React Native applications.<br>
-                I'm also experienced at other fields such as data science, game and web development, virtual reality, embedded computing
-                and more. <br>
-                When I'm not coding, I'm either playing videogames, basketball, or trying to produce something
-                that should resemble electronic music.
-            </p>
-        </section>
+      <section>
+        <h2>About me</h2>
+        <p>
+          I'm a Computer Engineer graduated at Insper. My most recent work has
+          been at LATAM's biggest investment bank, BTG Pactual,<br />
+          where I lead the development of a new front-end architecture, help
+          structure and secure distributed and serverless environments and much
+          more. <br />
+          I'm also experienced at fields such as data science, cloud, web
+          security, devops, VR, game development, embedded computing and
+          applications for mobile and desktop.<br />
+          When I'm not coding, I'm either playing videogames, basketball, or
+          trying to produce something that should resemble electronic music.
+        </p>
+      </section>
 
-        <section>
-            <h2> Projects </h2>
-            <div class='projects-container'></div>
-        </section>
+      
+      <div class="marquee-wrapper">
+        <div class="marquee"></div>
+        <script src="marquee.js"></script>
+      </div>
 
-        <section>
-            <h2> My Music </h2>
-            <iframe id="sc" width="70%" height="350" scrolling="no" frameborder="yes" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/289399756&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-            <div
-                style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/frederico-vilela-curti" title="Frederico Vilela Curti" target="_blank"
-                    style="color: #cccccc; text-decoration: none;">Frederico Vilela Curti</a> · <a
-                    href="https://soundcloud.com/frederico-vilela-curti/sets/enjoy-ep-free-download"
-                    title="Enjoy EP [Free Download]" target="_blank"
-                    style="color: #cccccc; text-decoration: none;">Enjoy EP [Free Download]</a></div>
-        </section>
+      <div style="overflow: visible; margin-top: 64px;">
+        <h2>Highlights</h2>
+        <div class="highlight-container"></div>
+      </div>
 
+      <section class="pushable">
+        <h2>Repos</h2>
+        <div class="projects-container"></div>
+      </section>
 
+      <section class="pushable">
+        <h2>My Music</h2>
+        <iframe
+          id="sc"
+          width="70%"
+          height="350"
+          scrolling="no"
+          frameborder="yes"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/289399756&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        ></iframe>
+        <div
+          style="
+            font-size: 10px;
+            color: #cccccc;
+            line-break: anywhere;
+            word-break: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+              Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+            font-weight: 100;
+          "
+        >
+          <a
+            href="https://soundcloud.com/frederico-vilela-curti"
+            title="Frederico Vilela Curti"
+            target="_blank"
+            style="color: #cccccc; text-decoration: none"
+            >Frederico Vilela Curti</a
+          >
+          ·
+          <a
+            href="https://soundcloud.com/frederico-vilela-curti/sets/enjoy-ep-free-download"
+            title="Enjoy EP [Free Download]"
+            target="_blank"
+            style="color: #cccccc; text-decoration: none"
+            >Enjoy EP [Free Download]</a
+          >
+        </div>
+      </section>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
     <script src="main.js"></script>
-</body>
-
+    <script src="game.js"></script>
+  </body>
 </html>
