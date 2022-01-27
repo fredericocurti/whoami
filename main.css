@@ -351,3 +351,8 @@ iframe.dark {
   z-index: 9;
   display: none;
 }
+
+footer {
+  padding: 12px;
+  opacity: 0.5;
+}

@@ -15,6 +15,7 @@ const tech = [
     "Next.js",
     "Styled Components",
     "p5.js",
+    "Svelte",
     "Chrome/Firefox Extensions",
     "Electron.js",
     "Unity",
