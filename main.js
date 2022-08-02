@@ -171,7 +171,7 @@ const onClickRepo = async (id) => {
   overlay.style.opacity = 1
 }
 
-const renderHighlights = () => {
+const renderHighlights = async () => {
   const data = [{
     link: `https://www.youtube.com/watch?v=PXbE9RbXcv0`,
     label: 'Adventure Machine VR',
